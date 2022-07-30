@@ -3,3 +3,5 @@
 .bsp
 project/target
 target
+.classpath
+spark.properties
