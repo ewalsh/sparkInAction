@@ -1,8 +1,10 @@
-scalaVersion := "2.12.10"
-
+name := "sparkInAction"
 sbtVersion := "1.5.2"
-
+scalaVersion := "2.12.10"
 organization := "ai.economicdatasciences"
+version := "0.1-SNAPSHOT"
+
+scalacOptions ++= Seq("-feature", "-language:postfixOps")
 
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "3.1.2",

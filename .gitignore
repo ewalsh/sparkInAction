@@ -5,3 +5,4 @@ project/target
 target
 .classpath
 spark.properties
+data/
