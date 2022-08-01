@@ -10,6 +10,9 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "3.1.2",
   "org.apache.spark" %% "spark-sql" % "3.1.2",
   "org.apache.spark" %% "spark-mllib" % "3.1.2",
+  "org.scalanlp" %% "breeze" % "1.0",
+  "org.scalanlp" %% "breeze-natives" % "1.0",
+  "org.scalanlp" %% "breeze-viz" % "1.0",
   "com.typesafe" % "config" % "1.4.2",
   "org.scalatest" %% "scalatest" % "3.3.0-SNAP3" % Test
 )
