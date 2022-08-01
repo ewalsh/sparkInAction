@@ -2,11 +2,12 @@ package ai.economicdatasciences.sia.spark
 
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.streaming.{StreamingContext, Seconds}
 import org.apache.log4j.{Level, Logger}
 
 import com.typesafe.config.ConfigFactory
 
-object SparkInit {
+object SparkStreamingInit {
   val spark_master =
     ConfigFactory.load("spark.properties").getString("spark.master").replace(""""""","")
   val spark_port =
@@ -24,10 +25,10 @@ object SparkInit {
   val rootLogger = Logger.getRootLogger()
   rootLogger.setLevel(Level.WARN)
   // .enableHiveSupport()
-  val spark = SparkSession.builder().config(sparkConf).getOrCreate()
-  val sc = spark.sparkContext
-  // val ssc = new StreamingContext(sparkConf, Seconds(5))
-  sc.setLogLevel("WARN")
-  spark.sparkContext.setLogLevel("WARN")
+  // val spark = SparkSession.builder().config(sparkConf).getOrCreate()
+  // val sc = spark.sparkContext
+  val ssc = new StreamingContext(sparkConf, Seconds(5))
+  // sc.setLogLevel("WARN")
+  // spark.sparkContext.setLogLevel("WARN")
 
 }
